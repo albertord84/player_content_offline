@@ -25,10 +25,6 @@ export default class NavBar extends Component {
         },{
           titulo:"Ciências"
         },{
-          titulo:"Espanhol"
-        },{
-          titulo:"Francês"
-        },{
           titulo:"Geografia"
         },{
           titulo:"História"

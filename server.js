@@ -18,16 +18,12 @@ server.use(express.static('dist'));
 server.use(webpackDevMiddleware(compiler))
 server.use(webpackHotMiddleware(compiler))
 
-
-
 server.post('/savexml', function response(req, res) {
   res.send(req.body);
-
   fs.writeFile(path.join(__dirname, "/dist/indice.xml"), req.body.data, function(err) {
       if(err) {
           return console.log(err);
       }
-
       console.log("The file was saved!");
   });
 });
