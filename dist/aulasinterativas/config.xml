@@ -1,0 +1,1 @@
+<configs>	<caminhoXmlAula>indice.xml</caminhoXmlAula>	<caminhoArquivosAula>\aulas\</caminhoArquivosAula>	<caminhoCarregamentoExterno>\aulas\</caminhoCarregamentoExterno>	<caminhoFundo>\fundos\</caminhoFundo>	<versaoTeste>true</versaoTeste> </configs>

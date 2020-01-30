@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule (.*) https://fabricadeaulas.s3.amazonaws.com/aulas/$1 [R=301,L] 

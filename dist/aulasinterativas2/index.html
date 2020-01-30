@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>Titulo</title>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+	function removeParam(parameter)
+	{
+	  var url=document.location.href;
+	  var urlparts= url.split('?');
+
+	 if (urlparts.length>=2)
+	 {
+	  var urlBase=urlparts.shift(); 
+	  var queryString=urlparts.join("?"); 
+
+	  var prefix = encodeURIComponent(parameter)+'=';
+	  var pars = queryString.split(/[&;]/g);
+	  for (var i= pars.length; i-->0;)               
+	      if (pars[i].lastIndexOf(prefix, 0)!==-1)   
+	          pars.splice(i, 1);
+	  url = urlBase+'?'+pars.join('&');
+	}
+	return url;
+	}
+
+	var $_GET = {};
+
+	document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+		function decode(s) {
+			return decodeURIComponent(s.split("+").join(" "));
+		}
+
+		$_GET[decode(arguments[1])] = decode(arguments[2]);
+	});
+	aula = $_GET["idaula"];
+	retornaHtml = $_GET["retornaHtml"];
+	var flashvars = {};
+	flashvars.idAula = aula;
+	//flashvars.retornaHtml = retornaHtml;
+    swfobject.embedSWF("skin/skin_AS2.swf", "player", "880", "660", "9.0.0","expressInstall.swf", flashvars);
+    //window.location.href = removeParam('idaula');
+    </script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor='#CCCCCC'>
+	
+<div id='tudo' style='width:880px; margin:0 auto;'>
+<div id='player'></div>
+</div></body>
+<script type="text/javascript">
+
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9687924-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</html>
